@@ -1,0 +1,421 @@
+#root {
+  height: 100%;
+  width: 100%;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Glowing Pulse Animation */
+@keyframes sosPulse {
+  0% {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6), 0 0 40px rgba(255, 0, 0, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.9), 0 0 60px rgba(255, 0, 0, 0.6);
+    transform: scale(1.05);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6), 0 0 40px rgba(255, 0, 0, 0.4);
+    transform: scale(1);
+  }
+}
+.page-1 {
+  height: 100vh;
+  width: 100%;
+}
+.navbar {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  /* z-index: 999; */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar-logo {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-logo img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 6px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.navbar-logo h2 {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.navbar-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.login-btn,
+.signup-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn {
+  background-color: #ffffff;
+  color: #2f12ec;
+}
+
+.signup-btn {
+  background-color: #2e09e7;
+  color: rgb(245, 244, 248);
+}
+
+.login-btn:hover,
+.signup-btn:hover {
+  opacity: 0.85;
+}
+/* Hover Effects */
+.sos-button:hover {
+  background-color: #ff0000;
+  border-color: #ff6666;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.9), 0 0 50px rgba(255, 0, 0, 0.6);
+  transform: scale(1.08);
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+.header {
+  position: relative;
+  width: 100%;
+  height: 80px;
+}
+.header h1 {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-size: 36px;
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-family: "Orbitron", sans-serif;
+  z-index: 1000;
+}
+
+.header h1:hover {
+  transform: scale(1.05);
+}
+.hero-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: fadeIn 2s ease-out;
+  flex-direction: column;
+  width: 100%;
+}
+.sos-button {
+  background-color: #ff1e1e;
+  color: #fff;
+  font-size: 32px;
+  padding: 25px 60px;
+  border: 3px solid #ff4d4d;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  animation: sosPulse 1.5s infinite;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.6), 0 0 40px rgba(255, 0, 0, 0.4);
+}
+.section-title {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 28px;
+  color: #ff9ca3;
+  text-align: center;
+}
+
+.tagline {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 72px;
+  font-weight: 600;
+  color: #ffffffcc;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 4s steps(40, end) forwards;
+  position: relative;
+}
+
+/* Responsive Grid Layout */
+.feature-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.1);
+  width: 300px; /* Fix the width */
+  min-height: 480px; /* Optional: makes height consistent */
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.feature-card img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-weight: 600;
+  font-size: 18px;
+  color: #ffd6db;
+  font-family: "Rajdhani", sans-serif;
+}
+.durlassa-wrapper {
+  width: 100%;
+  margin: 0 auto; /* centers the container */
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+section {
+  width: 100%;
+
+  text-align: center;
+}
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid #ff8fa3;
+  border-radius: 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 126, 179, 0.3);
+}
+
+.feature-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 30px rgba(255, 126, 179, 0.5);
+}
+.card-top {
+  width: 100%;
+  height: 250px; /* or any desired height */
+  overflow: hidden;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+
+.card-top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ensures the image fills the area and crops nicely */
+  display: block;
+}
+
+.card-middle {
+  padding: 20px;
+  text-align: left;
+  width: 100%;
+}
+
+.card-middle ul {
+  list-style-type: disc;
+  padding-left: 30px;
+  color: #ffd6db;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 16px;
+}
+.card-middle ul li {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.5;
+}
+
+.card-bottom {
+  margin: 20px 0;
+}
+
+.police-btn {
+  background-color: #ff4d6d;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  font-size: 14px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: "Orbitron", sans-serif;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 77, 109, 0.6);
+}
+
+.police-btn:hover {
+  background-color: #ff1f44;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 77, 109, 0.9);
+}
+
+/* Desktop Enhancements */
+@media screen and (min-width: 768px) {
+  .durlassa-wrapper {
+    padding: 40px;
+  }
+  .tagline {
+    font-size: 90px; /* Even larger text for larger screens */
+    line-height: 1.3; /* Slightly larger line height */
+  }
+
+  .sos-button {
+    font-size: 32px;
+    padding: 25px 60px;
+  }
+
+  .about-section p,
+  .helpline-section ul {
+    font-size: 18px;
+  }
+
+  .footer {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .tagline {
+    font-size: 120px; /* Increase font size for desktop */
+    line-height: 1.4; /* Adjust line height for readability */
+  }
+}
+.features-section {
+  display: flex;
+  gap: 33px;
+}
+.footer {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 80px;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  font-size: 36px;
+  font-family: "Orbitron", sans-serif;
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.footer-tagline {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #ffffffcc;
+  font-style: italic;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-links a {
+  color: #ff9ca3;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #ff7eb3;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.footer-socials a {
+  color: #fff;
+  font-size: 24px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  transform: scale(1.2);
+  color: #ff7eb3;
+  text-shadow: 0 0 10px #ff7eb3;
+}
+
+.footer-copy {
+  font-size: 14px;
+  color: #aaaaaa;
+  margin-top: 20px;
+}
